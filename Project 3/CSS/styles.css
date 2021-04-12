@@ -6,9 +6,9 @@ header {
     background-color: darkslategray;
     color: white;
     height: 100px;
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
     text-align: center;
     font-size: .75em;
 }
@@ -36,13 +36,18 @@ input, select {
     margin: 5px auto;
     width: 100%;
     align-content: center;
+    border-radius: 5px;
+    border: 0 none;
+    background-color: rgb(233, 230, 230);
 }
 
 ::placeholder {
     text-align: right;
 }
 
-
+input[type=text]:active {
+    color: #52bab3;
+}
 
 fieldset {
     border: 0 none;
@@ -51,7 +56,7 @@ fieldset {
 legend {
     font-weight: bold;
     font-size: 1.25em;
-    padding: 5px;
+    padding: 10px 5px 5px 5px;
 }
 
 .fieldset {
@@ -64,10 +69,21 @@ legend {
     padding: 5px;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 0 4px 8px 0;
-  display: inline;
+input[type="radio"] {
+    width: 100px;
+    margin-left: 0;
+}
+
+#html_format,
+#text_format {
+    width: 30px;
+    padding-right: 10px;
+}
+
+#html,
+#css,
+#javascript {
+    width: 30px;
 }
 
 .news {
@@ -77,10 +93,12 @@ input[type="checkbox"] {
 }
 
 .label {
+    box-sizing: border-box;
     text-align: left;
     margin: 0 auto;
-    padding: 15px;
     margin-top: 10px;
+    height: 10px;
+    
 }
 
 #topics {
@@ -103,5 +121,47 @@ input[type="checkbox"] {
 
 }
 
+select {
+    width: 50%;
+}
 
+div {
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+textarea {
+    display: block;
+    padding: 5px;
+    width: 100%;
+    height: 100px;
+    margin: 10px 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    margin: 0 auto;
+    padding-bottom: 15px;
+    color: lightslategray;
+    font-style: italic;
+}
+
+body {
 font-family: 'Merriweather', serif;
+}
+
+@media (min-width: 768px) {
+    
+    
+    form {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+
+    .top {
+        max-width: 50%;
+        margin: 0 auto;
+    }
+}
